@@ -25,8 +25,8 @@ export class RegisterPage extends Component<any,State>{
         this.setState( {name: value} )
 
     };
-    public setUserPassword(value: String):void {
-        this.setState( {userPassword: value} )
+    public setUserpassword(value: String):void {
+        this.setState({userPassword:value})
 
     };
 

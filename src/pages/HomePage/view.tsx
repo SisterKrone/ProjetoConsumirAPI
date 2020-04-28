@@ -7,7 +7,7 @@ export class HomeBody extends Component<any, any>{
             <View>
                 <Text>Login:  </Text>
                 <TextInput keyboardType= 'name-phone-pad'
-                onChangeText={ (value)=>actions.setNome(value) } 
+                onChangeText={ (value)=>actions.setLogin(value) } 
                 />
 
                 <Text>Senha: </Text>
@@ -15,7 +15,7 @@ export class HomeBody extends Component<any, any>{
                 onChangeText={ (value)=>actions.setSenha(value) } 
                 />
 
-                <Button onPress={()=> actions.logar() } title='Logar'  />
+                <Button onPress={()=> actions.logar() } title='Logar' color='green'  />
                 <Button onPress={()=> actions.cadastrar() } title='Cadastre-se'  />
                 
             </View>

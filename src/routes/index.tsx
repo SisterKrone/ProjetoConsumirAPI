@@ -16,6 +16,10 @@ export default class Routes extends Component {
                 name={"home"} component={HomePage}
                 options={{title:"Login"}}
                 />
+                <StackNavigator.Screen
+                name={"Cadastro"} component={RegisterPage}
+                options={{title:"Cadastro"}}
+                />
                 
             </StackNavigator.Navigator>
        </NavigationContainer>

@@ -26,8 +26,8 @@ export class HomeBody extends Component<any, any>{
                 />
 
                 <Text>User_Password: </Text>
-                <TextInput keyboardType= 'name-phone-pad'
-                onChangeText={ (value)=>actions.setUserPassWord(value) } 
+                <TextInput keyboardType= 'name-phone-pad'secureTextEntry={true}
+                onChangeText={ (value)=>actions.setUserpassword(value) } 
                 />
 
                 <Button onPress={()=> actions.cadastrar() } title='Registrar'  />
