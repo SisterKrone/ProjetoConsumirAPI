@@ -1,5 +1,5 @@
 import React, { Component,ReactNode } from 'react';
-
+import repository from '../../utils/storage'
 import { HomeBody} from './view';
 import api from '../../utils/api';
 type State={login:String , senha:String};
@@ -27,6 +27,7 @@ export class HomePage extends Component<any,State>{
           }
         const response=await api.post('/user/login',body);
         const token = response.data;
+        repository.save(token)
         this.props.navigation.navigate('Listagem')
 
         

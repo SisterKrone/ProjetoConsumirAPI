@@ -2,6 +2,7 @@ import React, { Component,ReactNode } from 'react';
 
 import { HomeBody} from './view';
 import api from '../../utils/api';
+import repository from '../../utils/storage'
 type State={address:String, age:number, email:String, name:String, userPassword:String};
 
 export class RegisterPage extends Component<any,State>{
@@ -43,6 +44,7 @@ export class RegisterPage extends Component<any,State>{
           }
         const response=await api.post('/user/customer/add',body);
         const token = response.data;
+        repository.save(token)
         this.props.navigation.navigate('Listagem')
 
         

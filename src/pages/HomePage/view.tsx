@@ -11,7 +11,7 @@ export class HomeBody extends Component<any, any>{
                 />
 
                 <Text>Senha: </Text>
-                <TextInput keyboardType= 'name-phone-pad'
+                <TextInput keyboardType= 'name-phone-pad'secureTextEntry={true}
                 onChangeText={ (value)=>actions.setSenha(value) } 
                 />
 
